@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>To do list</title>
+        <meta name="viewport" content="width=device-width" initial-scale=1.0">
+        <link rel="stylesheet" href="style2.css">
+    </head>
+    
+
+    <body>
+        <div class="header">
+            <h2>Daily To Do List</h2>
+            <input type="text" id="myInput" placeholder="Task...">
+            <button onclick="addItem()" class="addButton">Add task</button>
+        </div>
+
+        
+        <ul id="myUL" class="myList">
+             <li>Pay bills </li> 
+             <li class="checked">Read a book </li>
+             <li>Buy groceries </li>
+             <li>Clean bathroom </li>
+             <li>Organize closet </li>
+             <li>Walk dog </li>
+
+        </ul>
+
+        <button onclick="removeItem()" id="reset">Reset list</button>
+       
+    <script>
+        function addItem() {
+            var ul = document.getElementById("myUL");
+            var candidate = document.getElementById("myInput");
+            var li = document.createElement("li");
+            li.setAttribute('id', candidate.value);
+            li.appendChild(document.createTextNode(candidate.value));
+            ul.appendChild(li);
+        }
+
+        function removeItem() {
+            var list = document.getElementById("myUL");
+            while (list.hasChildNodes()) {
+                list.removeChild(list.firstChild);
+            }
+        }
+
+        
+        
+            var list = document.querySelector("ul");
+            list.addEventListener("click", function(ev) {
+                if (ev.target.tagName === "LI") {
+                    ev.target.classList.toggle("checked");
+                }
+            }, false);
+            
+    </script>
+
+    </body>
+</html>

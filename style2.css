@@ -1,0 +1,74 @@
+.header {
+    box-sizing: border-box;
+    background-color:teal;
+    padding:70px;
+    color:white;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.addButton {
+    color:white;
+    background-color: darkslategrey;
+    padding:10px;
+    width:15%;
+    text-align: center;
+    font-size: 15px;
+    cursor:pointer;
+    transition:0.3s;
+    float:left;
+    box-shadow: 5px 5px 5px rgb(61, 61, 61);
+    border-radius: 10px;
+    
+}
+.addButton:hover { background-color:black;}
+
+#myInput {
+    width:75%;
+    padding:10px;
+    font-size: 15px;
+    float:left;
+    
+ }
+
+.myList {
+    margin:0;
+    padding:0; 
+    
+}
+
+.myList li{
+    cursor:pointer;
+    position:relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    background-color:rgb(223, 221, 221);
+    font-size: 18px;
+    transition:0.2s;
+  
+}    
+    
+
+.myList li:hover {
+    background-color: rgb(199, 199, 199);
+}
+
+
+
+
+ul li.checked  {
+    text-decoration: line-through;
+    background-color: gray;
+    color:white;
+}
+
+#reset {
+    margin-top:40px;
+    font-size:15px;
+    height:35px;
+    width:150px;
+    color:white;
+    background-color: darkslategrey;
+    box-shadow: 5px 5px 5px rgb(61, 61, 61);
+    border-radius: 10px;
+}
